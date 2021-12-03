@@ -13,6 +13,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        //untuk menjalankan seeder
+        //php artisan db:seed
+
         // \App\Models\User::factory(10)->create();
+        $this->call([
+            CampTableSeeder::class,
+            CampBenefitTableSeeder::class,
+            AdminUserSeeder::class,
+        ]);
     }
 }
